@@ -1,0 +1,12 @@
+#!/home/cryo/Plone/Python-2.7/bin/python
+
+import sys
+sys.path[0:0] = [
+    '/home/cryo/Plone/buildout-cache/eggs/setuptools-0.7.2-py2.7.egg',
+    '/home/cryo/Plone/buildout-cache/eggs/zc.buildout-2.2.1-py2.7.egg',
+  ]
+
+import zc.buildout.buildout
+
+if __name__ == '__main__':
+    sys.exit(zc.buildout.buildout.main())

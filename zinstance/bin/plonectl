@@ -1,0 +1,14 @@
+#!/home/cryo/Plone/Python-2.7/bin/python
+
+import sys
+sys.path[0:0] = [
+  '/home/cryo/Plone/buildout-cache/eggs/plone.recipe.unifiedinstaller-4.3.1-py2.7.egg',
+  '/home/cryo/Plone/buildout-cache/eggs/zc.recipe.egg-1.3.2-py2.7.egg',
+  '/home/cryo/Plone/buildout-cache/eggs/zc.buildout-2.2.1-py2.7.egg',
+  '/home/cryo/Plone/buildout-cache/eggs/setuptools-0.7.2-py2.7.egg',
+  ]
+
+import plone.recipe.unifiedinstaller.ctl
+
+if __name__ == '__main__':
+    sys.exit(plone.recipe.unifiedinstaller.ctl.main(server=None, clients=['instance'], location=r'/home/cryo/Plone/zinstance', binDirectory=r'/home/cryo/Plone/zinstance/bin', fileStorage=r'/home/cryo/Plone/zinstance/var/filestorage/Data.fs'))
